@@ -1,16 +1,6 @@
 # book_store
 
-A new Flutter project.
+Cette application permettra à toutes personnes qui aiment lire de trouver un livre selon son choix
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Thumbnails
+![original-ed50bf0da917255384d34d514885d516](https://github.com/DinoRu/e_book/assets/66199109/4eb876e4-3b4a-4424-9390-52d32c6f7b13)
