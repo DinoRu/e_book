@@ -12,12 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
-        providers: [
-          RepositoryProvider<AuthBloc>(
-              create: (_) => AuthBloc(myUserRepository: userRepository)
-          )
-        ],
-        child: const MyAppView(),
+      providers: [
+        RepositoryProvider<AuthBloc>(
+            create: (_) => AuthBloc(myUserRepository: userRepository)),
+      ],
+      child: const MyAppView(),
     );
   }
 }

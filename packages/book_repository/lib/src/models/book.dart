@@ -31,16 +31,20 @@ class Book {
       );
 
   factory Book.fromJson(Map<String, dynamic> json) => Book(
-    kind: json["kind"],
-    totalItems: json["totalItems"],
-    items: json["items"] == null ? [] : List<Item>.from(json["items"]!.map((x) => Item.fromJson(x))),
-  );
+        kind: json["kind"],
+        totalItems: json["totalItems"],
+        items: json["items"] == null
+            ? []
+            : List<Item>.from(json["items"]!.map((x) => Item.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "kind": kind,
-    "totalItems": totalItems,
-    "items": items == null ? [] : List<dynamic>.from(items!.map((x) => x.toJson())),
-  };
+        "kind": kind,
+        "totalItems": totalItems,
+        "items": items == null
+            ? []
+            : List<dynamic>.from(items!.map((x) => x.toJson())),
+      };
 }
 
 class Item {
@@ -86,26 +90,34 @@ class Item {
       );
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
-    kind: json["kind"],
-    id: json["id"],
-    etag: json["etag"],
-    selfLink: json["selfLink"],
-    volumeInfo: json["volumeInfo"] == null ? null : VolumeInfo.fromJson(json["volumeInfo"]),
-    saleInfo: json["saleInfo"] == null ? null : SaleInfo.fromJson(json["saleInfo"]),
-    accessInfo: json["accessInfo"] == null ? null : AccessInfo.fromJson(json["accessInfo"]),
-    searchInfo: json["searchInfo"] == null ? null : SearchInfo.fromJson(json["searchInfo"]),
-  );
+        kind: json["kind"],
+        id: json["id"],
+        etag: json["etag"],
+        selfLink: json["selfLink"],
+        volumeInfo: json["volumeInfo"] == null
+            ? null
+            : VolumeInfo.fromJson(json["volumeInfo"]),
+        saleInfo: json["saleInfo"] == null
+            ? null
+            : SaleInfo.fromJson(json["saleInfo"]),
+        accessInfo: json["accessInfo"] == null
+            ? null
+            : AccessInfo.fromJson(json["accessInfo"]),
+        searchInfo: json["searchInfo"] == null
+            ? null
+            : SearchInfo.fromJson(json["searchInfo"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "kind": kind,
-    "id": id,
-    "etag": etag,
-    "selfLink": selfLink,
-    "volumeInfo": volumeInfo?.toJson(),
-    "saleInfo": saleInfo?.toJson(),
-    "accessInfo": accessInfo?.toJson(),
-    "searchInfo": searchInfo?.toJson(),
-  };
+        "kind": kind,
+        "id": id,
+        "etag": etag,
+        "selfLink": selfLink,
+        "volumeInfo": volumeInfo?.toJson(),
+        "saleInfo": saleInfo?.toJson(),
+        "accessInfo": accessInfo?.toJson(),
+        "searchInfo": searchInfo?.toJson(),
+      };
 }
 
 class AccessInfo {
@@ -150,7 +162,8 @@ class AccessInfo {
         viewability: viewability ?? this.viewability,
         embeddable: embeddable ?? this.embeddable,
         publicDomain: publicDomain ?? this.publicDomain,
-        textToSpeechPermission: textToSpeechPermission ?? this.textToSpeechPermission,
+        textToSpeechPermission:
+            textToSpeechPermission ?? this.textToSpeechPermission,
         epub: epub ?? this.epub,
         pdf: pdf ?? this.pdf,
         webReaderLink: webReaderLink ?? this.webReaderLink,
@@ -159,30 +172,30 @@ class AccessInfo {
       );
 
   factory AccessInfo.fromJson(Map<String, dynamic> json) => AccessInfo(
-    country: json["country"],
-    viewability: json["viewability"],
-    embeddable: json["embeddable"],
-    publicDomain: json["publicDomain"],
-    textToSpeechPermission: json["textToSpeechPermission"],
-    epub: json["epub"] == null ? null : Epub.fromJson(json["epub"]),
-    pdf: json["pdf"] == null ? null : Epub.fromJson(json["pdf"]),
-    webReaderLink: json["webReaderLink"],
-    accessViewStatus: json["accessViewStatus"],
-    quoteSharingAllowed: json["quoteSharingAllowed"],
-  );
+        country: json["country"],
+        viewability: json["viewability"],
+        embeddable: json["embeddable"],
+        publicDomain: json["publicDomain"],
+        textToSpeechPermission: json["textToSpeechPermission"],
+        epub: json["epub"] == null ? null : Epub.fromJson(json["epub"]),
+        pdf: json["pdf"] == null ? null : Epub.fromJson(json["pdf"]),
+        webReaderLink: json["webReaderLink"],
+        accessViewStatus: json["accessViewStatus"],
+        quoteSharingAllowed: json["quoteSharingAllowed"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "country": country,
-    "viewability": viewability,
-    "embeddable": embeddable,
-    "publicDomain": publicDomain,
-    "textToSpeechPermission": textToSpeechPermission,
-    "epub": epub?.toJson(),
-    "pdf": pdf?.toJson(),
-    "webReaderLink": webReaderLink,
-    "accessViewStatus": accessViewStatus,
-    "quoteSharingAllowed": quoteSharingAllowed,
-  };
+        "country": country,
+        "viewability": viewability,
+        "embeddable": embeddable,
+        "publicDomain": publicDomain,
+        "textToSpeechPermission": textToSpeechPermission,
+        "epub": epub?.toJson(),
+        "pdf": pdf?.toJson(),
+        "webReaderLink": webReaderLink,
+        "accessViewStatus": accessViewStatus,
+        "quoteSharingAllowed": quoteSharingAllowed,
+      };
 }
 
 class Epub {
@@ -200,12 +213,12 @@ class Epub {
       );
 
   factory Epub.fromJson(Map<String, dynamic> json) => Epub(
-    isAvailable: json["isAvailable"],
-  );
+        isAvailable: json["isAvailable"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "isAvailable": isAvailable,
-  };
+        "isAvailable": isAvailable,
+      };
 }
 
 class SaleInfo {
@@ -231,16 +244,16 @@ class SaleInfo {
       );
 
   factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
-    country: json["country"],
-    saleability: json["saleability"],
-    isEbook: json["isEbook"],
-  );
+        country: json["country"],
+        saleability: json["saleability"],
+        isEbook: json["isEbook"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "country": country,
-    "saleability": saleability,
-    "isEbook": isEbook,
-  };
+        "country": country,
+        "saleability": saleability,
+        "isEbook": isEbook,
+      };
 }
 
 class SearchInfo {
@@ -258,12 +271,12 @@ class SearchInfo {
       );
 
   factory SearchInfo.fromJson(Map<String, dynamic> json) => SearchInfo(
-    textSnippet: json["textSnippet"],
-  );
+        textSnippet: json["textSnippet"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "textSnippet": textSnippet,
-  };
+        "textSnippet": textSnippet,
+      };
 }
 
 class VolumeInfo {
@@ -353,48 +366,66 @@ class VolumeInfo {
       );
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
-    title: json["title"],
-    authors: json["authors"] == null ? [] : List<String>.from(json["authors"]!.map((x) => x)),
-    publisher: json["publisher"],
-    publishedDate: json["publishedDate"],
-    description: json["description"],
-    industryIdentifiers: json["industryIdentifiers"] == null ? [] : List<IndustryIdentifier>.from(json["industryIdentifiers"]!.map((x) => IndustryIdentifier.fromJson(x))),
-    readingModes: json["readingModes"] == null ? null : ReadingModes.fromJson(json["readingModes"]),
-    pageCount: json["pageCount"],
-    printType: json["printType"],
-    categories: json["categories"] == null ? [] : List<String>.from(json["categories"]!.map((x) => x)),
-    maturityRating: json["maturityRating"],
-    allowAnonLogging: json["allowAnonLogging"],
-    contentVersion: json["contentVersion"],
-    panelizationSummary: json["panelizationSummary"] == null ? null : PanelizationSummary.fromJson(json["panelizationSummary"]),
-    imageLinks: json["imageLinks"] == null ? null : ImageLinks.fromJson(json["imageLinks"]),
-    language: json["language"],
-    previewLink: json["previewLink"],
-    infoLink: json["infoLink"],
-    canonicalVolumeLink: json["canonicalVolumeLink"],
-  );
+        title: json["title"],
+        authors: json["authors"] == null
+            ? []
+            : List<String>.from(json["authors"]!.map((x) => x)),
+        publisher: json["publisher"],
+        publishedDate: json["publishedDate"],
+        description: json["description"],
+        industryIdentifiers: json["industryIdentifiers"] == null
+            ? []
+            : List<IndustryIdentifier>.from(json["industryIdentifiers"]!
+                .map((x) => IndustryIdentifier.fromJson(x))),
+        readingModes: json["readingModes"] == null
+            ? null
+            : ReadingModes.fromJson(json["readingModes"]),
+        pageCount: json["pageCount"],
+        printType: json["printType"],
+        categories: json["categories"] == null
+            ? []
+            : List<String>.from(json["categories"]!.map((x) => x)),
+        maturityRating: json["maturityRating"],
+        allowAnonLogging: json["allowAnonLogging"],
+        contentVersion: json["contentVersion"],
+        panelizationSummary: json["panelizationSummary"] == null
+            ? null
+            : PanelizationSummary.fromJson(json["panelizationSummary"]),
+        imageLinks: json["imageLinks"] == null
+            ? null
+            : ImageLinks.fromJson(json["imageLinks"]),
+        language: json["language"],
+        previewLink: json["previewLink"],
+        infoLink: json["infoLink"],
+        canonicalVolumeLink: json["canonicalVolumeLink"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "title": title,
-    "authors": authors == null ? [] : List<dynamic>.from(authors!.map((x) => x)),
-    "publisher": publisher,
-    "publishedDate": publishedDate,
-    "description": description,
-    "industryIdentifiers": industryIdentifiers == null ? [] : List<dynamic>.from(industryIdentifiers!.map((x) => x.toJson())),
-    "readingModes": readingModes?.toJson(),
-    "pageCount": pageCount,
-    "printType": printType,
-    "categories": categories == null ? [] : List<dynamic>.from(categories!.map((x) => x)),
-    "maturityRating": maturityRating,
-    "allowAnonLogging": allowAnonLogging,
-    "contentVersion": contentVersion,
-    "panelizationSummary": panelizationSummary?.toJson(),
-    "imageLinks": imageLinks?.toJson(),
-    "language": language,
-    "previewLink": previewLink,
-    "infoLink": infoLink,
-    "canonicalVolumeLink": canonicalVolumeLink,
-  };
+        "title": title,
+        "authors":
+            authors == null ? [] : List<dynamic>.from(authors!.map((x) => x)),
+        "publisher": publisher,
+        "publishedDate": publishedDate,
+        "description": description,
+        "industryIdentifiers": industryIdentifiers == null
+            ? []
+            : List<dynamic>.from(industryIdentifiers!.map((x) => x.toJson())),
+        "readingModes": readingModes?.toJson(),
+        "pageCount": pageCount,
+        "printType": printType,
+        "categories": categories == null
+            ? []
+            : List<dynamic>.from(categories!.map((x) => x)),
+        "maturityRating": maturityRating,
+        "allowAnonLogging": allowAnonLogging,
+        "contentVersion": contentVersion,
+        "panelizationSummary": panelizationSummary?.toJson(),
+        "imageLinks": imageLinks?.toJson(),
+        "language": language,
+        "previewLink": previewLink,
+        "infoLink": infoLink,
+        "canonicalVolumeLink": canonicalVolumeLink,
+      };
 }
 
 class ImageLinks {
@@ -416,14 +447,14 @@ class ImageLinks {
       );
 
   factory ImageLinks.fromJson(Map<String, dynamic> json) => ImageLinks(
-    smallThumbnail: json["smallThumbnail"],
-    thumbnail: json["thumbnail"],
-  );
+        smallThumbnail: json["smallThumbnail"],
+        thumbnail: json["thumbnail"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "smallThumbnail": smallThumbnail,
-    "thumbnail": thumbnail,
-  };
+        "smallThumbnail": smallThumbnail,
+        "thumbnail": thumbnail,
+      };
 }
 
 class IndustryIdentifier {
@@ -444,15 +475,16 @@ class IndustryIdentifier {
         identifier: identifier ?? this.identifier,
       );
 
-  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) => IndustryIdentifier(
-    type: json["type"],
-    identifier: json["identifier"],
-  );
+  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) =>
+      IndustryIdentifier(
+        type: json["type"],
+        identifier: json["identifier"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "type": type,
-    "identifier": identifier,
-  };
+        "type": type,
+        "identifier": identifier,
+      };
 }
 
 class PanelizationSummary {
@@ -473,15 +505,16 @@ class PanelizationSummary {
         containsImageBubbles: containsImageBubbles ?? this.containsImageBubbles,
       );
 
-  factory PanelizationSummary.fromJson(Map<String, dynamic> json) => PanelizationSummary(
-    containsEpubBubbles: json["containsEpubBubbles"],
-    containsImageBubbles: json["containsImageBubbles"],
-  );
+  factory PanelizationSummary.fromJson(Map<String, dynamic> json) =>
+      PanelizationSummary(
+        containsEpubBubbles: json["containsEpubBubbles"],
+        containsImageBubbles: json["containsImageBubbles"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "containsEpubBubbles": containsEpubBubbles,
-    "containsImageBubbles": containsImageBubbles,
-  };
+        "containsEpubBubbles": containsEpubBubbles,
+        "containsImageBubbles": containsImageBubbles,
+      };
 }
 
 class ReadingModes {
@@ -503,12 +536,12 @@ class ReadingModes {
       );
 
   factory ReadingModes.fromJson(Map<String, dynamic> json) => ReadingModes(
-    text: json["text"],
-    image: json["image"],
-  );
+        text: json["text"],
+        image: json["image"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "text": text,
-    "image": image,
-  };
+        "text": text,
+        "image": image,
+      };
 }
